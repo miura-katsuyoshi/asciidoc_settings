@@ -1,0 +1,91 @@
+= Asciidoc 冒頭部の設定例
+三浦克介 <k-miura@persol-rd.co.jp>
+v1.0, 2021-05-02
+:lang: ja
+:toc: left
+:toc-levels: 3
+:toc-title: 目次
+:sectnums:
+:sectnum-levels: 3
+:icons: font
+:imagesdir: Images
+:xrefstyle: short
+:figure-caption: 図
+:table-caption: 表
+:listing-caption: リスト
+:appendix-caption: 付録
+:example-caption: 例
+:source-highlighter: highlightjs
+
+// :source-highlighter: coderay
+// :source-highlighter: highlightjs
+// :source-highlighter: prettify
+// :source-highlighter: pygments
+// :source-highlighter: rouge
+
+本文書では、Asciidoc 冒頭部の設定例を示し、それぞれの設定（document attribute）について解説する。
+
+== Asciidoc 冒頭部の書き方
+Asciidoc 冒頭部には、文書のレンダリング（整形）の仕方を設定する document attribute を記述する。
+
+Asciidoc 冒頭部の書き方の例を <<list:list_ref>> に示す。
+
+[[list:list_ref]]
+[source,asciidoc]
+.Asciidoc 冒頭部の書き方
+----
+= Asciidoc 冒頭部の設定例
+三浦克介 <k-miura@persol-rd.co.jp>
+v1.0, 2021-05-02
+:lang: ja
+:toc: left
+:toc-levels: 3
+:toc-title: 目次
+:sectnums:
+:sectnum-levels: 3
+:icons: font
+:imagesdir: Images
+:xrefstyle: short
+:figure-caption: 図
+:table-caption: 表
+:listing-caption: リスト
+:appendix-caption: 付録
+:example-caption: 例
+:source-highlighter: highlightjs
+
+この文書では、Asciidoc 冒頭部の設定例を示す。
+----
+
+== Asciidoc 文書設定の説明
+
+<<list:list_ref>> で示した Asciidoc 文書設定の各項目について、設定内容を <<tbl.asciidoc_settings>> に示す。
+
+[[tbl.asciidoc_settings]]
+.Asciidoc 文書設定の説明
+[cols="3,2,8"]
+|===
+|項目名 |値 |説明
+
+|lang| ja |言語設定
+|toc| left | 目次の配置位置：left はページ左側に目次を配置する。但し、ページ幅が狭い場合は、自動的に文書冒頭部に配置される
+|toc-levels| 3 |目次に表示されるセクションレベルの最大値。toc-levels=3 は、`===` で記述されるセクションまでが目次に表示される。但し、`=` は文書タイトルであり、これは目次には表示されない。
+|toc-title| 目次 |目次のタイトル部に表示される文字列。
+|sectnums| |章に番号を付ける。
+|sectnum-levels| 3 |番号を付ける章の最大レベル。`=` は文書タイトルなので、`==` が第1レベルの章を示す。
+|icons| font |CAUTION:, WARNING:, NOTE:, TIPS: の欄に、アイコンを表示する。
+|imagesdir| Images |画像を格納するディレクトリ。
+|xrefstyle| short |図や表などを参照する際、「図1」の様に表示する。
+|figure-caption| 図 |図番号に付ける文字列。
+|table-caption| 表 |表番号に付ける文字列。
+|listing-caption| リスト |リスト番号に付ける文字列。
+|appendix-caption| 付録 |付録を示す文字列。
+|example-caption| 例 |例を示す文字列。
+|source-highlighter| highlightjs |ソースコードを表示する際、シンタックスハイライトを行う。この作業を行う外部ツールとして、highlight.js を用いる（*1）。
+|===
+
+NOTE: （*1）ソースコードのシンタックスハイライトを行うツールとして、highlight.js の他に、coderay, prettify, pygments, rouge がある。いずれも、外部ツールのインストールが必要。VsCode に Asciidoc 拡張をインストールしていれば、highlight.js は外部ツール無しでシンタックスハイライトが可能。
+
+== 参照情報
+
+. Asciidoctor User Manual, Appendix A: Catalog of Document Attributes, http://www.seinan-gu.ac.jp/~shito/asciidoctor/html_chunk/chap99.html
+. Asciidoctor 文法クイックリファレンス(日本語訳), https://takumon.github.io/asciidoc-syntax-quick-reference-japanese-translation/
