@@ -16,6 +16,7 @@ v1.0, 2021-05-02
 :appendix-caption: 付録
 :example-caption: 例
 :source-highlighter: highlightjs
+:stem: latexmath
 
 // :source-highlighter: coderay
 // :source-highlighter: highlightjs
@@ -52,6 +53,7 @@ v1.0, 2021-05-02
 :appendix-caption: 付録
 :example-caption: 例
 :source-highlighter: highlightjs
+:stem: latexmath
 
 この文書では、Asciidoc 冒頭部の設定例を示す。
 ----
@@ -81,11 +83,14 @@ v1.0, 2021-05-02
 |appendix-caption| 付録 |付録を示す文字列。
 |example-caption| 例 |例を示す文字列。
 |source-highlighter| highlightjs |ソースコードを表示する際、シンタックスハイライトを行う。この作業を行う外部ツールとして、highlight.js を用いる（*1）。
+|stem | latexmath |STEM (Science, Technology, Engineering and Math) サポートを有効し、LaTeX 形式を選択。latexmath を指定しない場合は、AsciiMath 形式。なお、数式は、HTML 形式に変換した場合の正しく表示される。
 |===
 
 NOTE: （*1）ソースコードのシンタックスハイライトを行うツールとして、highlight.js の他に、coderay, prettify, pygments, rouge がある。いずれも、外部ツールのインストールが必要。VsCode に Asciidoc 拡張をインストールしていれば、highlight.js は外部ツール無しでシンタックスハイライトが可能。
 
-== 参照情報
+[bibliography]
+== 参考文献
 
-. Asciidoctor User Manual, Appendix A: Catalog of Document Attributes, http://www.seinan-gu.ac.jp/~shito/asciidoctor/html_chunk/chap99.html
-. Asciidoctor 文法クイックリファレンス(日本語訳), https://takumon.github.io/asciidoc-syntax-quick-reference-japanese-translation/
+* [[[Aum]]] Asciidoctor User Manual, Appendix A: Catalog of Document Attributes, http://www.seinan-gu.ac.jp/~shito/asciidoctor/html_chunk/chap99.html
+
+* [[[Abq]]] Asciidoctor 文法クイックリファレンス(日本語訳), https://takumon.github.io/asciidoc-syntax-quick-reference-japanese-translation/
